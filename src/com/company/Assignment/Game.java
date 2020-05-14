@@ -490,24 +490,32 @@ public class Game
      */
     private boolean validateName(String userInput)
     {
-//        for (int i = 0; i < userInput.length(); i++)
-//        {
-//            // check each char in each index
-//            if (!Character.isDigit(userInput.charAt(i)))
-//            {
-//                return false;
-//            }
+////        for (int i = 0; i < userInput.length(); i++)
+////        {
+////            // check each char in each index
+////            if (!Character.isDigit(userInput.charAt(i)))
+////            {
+////                return false;
+////            }
+////
+////        }
 //
+//        //Change the restriction to numbers only
+//        if (userInput.length()>5){
+//            //If you need some instruction for the real user, just print something
+//            return false;
+//        }else {
+//            return true;
 //        }
-
-        //Change the restriction to numbers only
-        if (userInput.length()>5){
-            //If you need some instruction for the real user, just print something
-            return false;
-        }else {
-            return true;
+        for (int i = 0; i < userInput.length(); i++)
+        {
+            if (Character.isLetter(userInput.charAt(i))||Character.isDigit(userInput.charAt(i))) {
+                //If you need some instruction for the real user, just print something
+                return true;
+            } else {
+                return false;
+            }
         }
-
 
 //        int i=0;
 //        while(true){
