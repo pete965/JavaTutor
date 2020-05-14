@@ -256,9 +256,35 @@ public class Game
      */
     public void playerGuessNumber(Card card)
     {
-        for (int i = 1; i <= 4; i++)
-        {
-            // request player enter a number and set player guess
+//        for (int i = 1; i <= 4; i++)
+//        {
+//            // request player enter a number and set player guess
+//            requestPlayerEnterNumber();
+//            // compare guess suit with hidden suit
+//            boolean guessNumberIsRight = compareGuessNumberWithHiddenNumber(card);
+//            // display guess suit result
+//            displayGuessNumberResult(i, guessNumberIsRight);
+//            // if correct then break for loop
+//            if (guessNumberIsRight)
+//                break;
+//            else if (cardGamePlayer.getScore() <= 0)
+//            {
+//                System.out.println("You have no score to continue the game!");
+//                break;
+//            }
+//            else if (i == 3 && cardGamePlayer.getScore() > 0)
+//            {
+//                if (Integer.parseInt(cardGamePlayer.getGuess()) > card.getNumber())
+//                    System.out.println("HINT: Your last guess is HIGHER than the correct answer");
+//                else
+//                    System.out.println("HINT: Your last guess is LOWER than the correct answer");
+//            }
+//            else if (i == 4)
+//                System.out.println("The correct answer is: " + card.getNumber());
+//        }
+        int i=1;
+        while(i<=4){
+//             request player enter a number and set player guess
             requestPlayerEnterNumber();
             // compare guess suit with hidden suit
             boolean guessNumberIsRight = compareGuessNumberWithHiddenNumber(card);
@@ -281,6 +307,9 @@ public class Game
             }
             else if (i == 4)
                 System.out.println("The correct answer is: " + card.getNumber());
+
+
+            i++;
         }
     }
     
